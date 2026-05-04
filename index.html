@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Sentiment Analyzer</title>
+</head>
+<body>
+
+<h2>AI Sentiment Analyzer</h2>
+
+<input type="text" id="text" placeholder="Enter text">
+<button onclick="predict()">Predict</button>
+
+<p id="result"></p>
+
+<script>
+function predict() {
+    let text = document.getElementById("text").value;
+
+    fetch(`http://127.0.0.1:8000/predict?text=${text}`)
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("result").innerText =
+            "Prediction: " + data.prediction;
+    })
+    .catch(error => {
+        console.log(error);
+        document.getElementById("result").innerText = "Error connecting to API";
+    });
+}
+</script>
+
+</body>
+</html>
