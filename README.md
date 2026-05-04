@@ -1,40 +1,33 @@
-\# AI Sentiment Analyzer
+# AI Sentiment Analyzer
 
+This project is a machine learning-based sentiment analysis system that predicts whether a given text is positive or negative.
 
+## Features
+- FastAPI backend
+- Simple HTML frontend
+- Pre-trained ML model (scikit-learn)
+- Docker support
 
-\## Repository Used
+## How to Run
 
-https://github.com/tiangolo/fastapi
+### 1. Install dependencies
+pip install fastapi uvicorn scikit-learn pandas
 
+### 2. Run server
+uvicorn app:app --reload
 
+### 3. Open frontend
+Open index.html in browser
 
-\## Description
+## Example
+Input: "good movie"
+Output: Positive
 
-This project performs sentiment analysis using TextBlob and FastAPI.
+## Tech Stack
+- Python
+- FastAPI
+- Scikit-learn
+- HTML
 
-
-
-\## Features
-
-\- Sentiment Prediction (ML)
-
-\- Text Generation (LLM Simulation)
-
-\- Triton Simulation
-
-\- Frontend Interface
-
-\- Docker Deployment
-
-
-
-\## Modifications
-
-\- Added ML model
-
-\- Created API endpoints
-
-\- Integrated frontend
-
-\- Dockerized the application
-
+## Author
+Pavya
